@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+  <script>
+    function addLanguage(langName) {
+      // Create a new <li> element
+      const li = document.createElement("li");
+
+      // Set the content of the <li> element
+      li.innerHTML = `${langName}`;
+
+      // Find the element with class "language" and append the new <li> to it
+      document.querySelector(".language").appendChild(li);
+    }
+
+    // Call the function to add a language
+    addLanguage("Python");
+    addLanguage("typescript");
+    addLanguage("ruby");
+    addLanguage("swift");
+    addLanguage("Go");
+    addLanguage("Kotlin");
+    addLanguage("Rust");
+    addLanguage("C#");
+    addLanguage("Java");
+    addLanguage("C++");
+    addLanguage("Delphi");
+    addLanguage("Pascal");
+    addLanguage("Objective-C");
+
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      il.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    // addLanguage("Java");
+
+    // Edit
+
+    const secnodLang = document.querySelector("li:nth-child(2)");
+    // secnodLang.innerHTML = "Mojo"
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secnodLang.replaceWith(newLi)
+
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>goline</li>"
+
+    // remove
+
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove( )
+  </script>
+</html>

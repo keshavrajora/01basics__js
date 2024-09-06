@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #212121;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="conting">
+      <div class="days">one</div>
+      <div class="days">two</div>
+      <div class="days">three</div>
+      <div class="days">four</div>
+    </div> -->
+  </body>
+  <script>
+    
+
+// function createAndAppendDiv() {
+//     // Create a new div element
+//     const div = document.createElement("div");
+
+//     // Set class, id, and attributes
+//     div.className = "days";
+//     div.id = Math.round(Math.random() * 10 + 1); // Random ID between 1 and 11
+//     div.setAttribute("title", "Day One");
+//     div.style.color = "pink";
+
+//     // Set inner HTML
+//     div.innerHTML = "hello world";
+
+//     // Create a text node and append it to the div
+//     const textNode = document.createTextNode('Hello world wpr 2');
+//     div.appendChild(textNode);
+
+//     // Append the div to the body
+//     document.body.appendChild(div);
+// }
+
+// // Call the function to create and append a div
+// createAndAppendDiv   ();
+
+// // loop // //
+
+for (let i = 0; i <= 10; i++) {
+   const div =  document.createElement("div");
+   div.className = "days";
+   div.id = i + 1;
+   div.setAttribute("title", `Day ${i + 1}`);
+   div.innerHTML = "hi keshav"
+   div.style.color = "aqua";
+   document.body.appendChild(div);
+console.log(i);
+
+    
+}
+
+    
+    
+    
+  </script>
+</html>
