@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+<body>
+  <h1>JavaScript</h1>
+  <button id="start">Start</button>
+  <button id="stop">Stop</button>
+
+  <script>
+    let intervalId; // Declare intervalId in the outer scope
+
+    const sayDate = (str) => {
+      console.log(str, Date.now());
+    };
+
+    const startInterval = () => {
+      // If there's already an interval running, clear it first
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+      // Set a new interval
+      intervalId = setInterval(sayDate, 1000, "hi JavaScript");
+    };
+
+    const stopInterval = () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+        intervalId = null; // Reset intervalId to null to indicate no interval is running
+      }
+    };
+
+    const startBtn = document.querySelector("#start");
+    startBtn.addEventListener("click", startInterval);
+
+    const stopBtn = document.querySelector("#stop");
+    stopBtn.addEventListener("click", stopInterval);
+  </script>
+</body>
+</html>
